@@ -70,6 +70,13 @@ export default class Header extends React.PureComponent {
                         ) : null
                     }
                     <p>{type}</p>
+                    <div className="triangle">
+                        <div className="inner">
+                            <div className="sideA" />
+                            <div className="sideB" />
+                            <div className="sideC" />
+                        </div>
+                    </div>
                 </div>
             </form>
         );
