@@ -1,0 +1,157 @@
+.triangle {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+
+    &:before{
+        content: "";
+        display: block;
+        padding-top: 46%;
+    }
+
+    .inner {
+        position: absolute;
+        left: 50px;
+        right: 50px;
+        top: auto;
+        bottom: 35px;
+
+        .sideA {
+            display: none;
+            position: absolute;
+            bottom: 0px;
+            left: 0px; 
+            height: 1px;
+            overflow: hidden;
+            width: 50%;
+            background: #ffffff;
+            transform-origin: 0 100%;
+            transform: rotate(-50deg);
+        }
+
+        .sideB {
+            display: none;
+            position: absolute;
+            bottom: 0px;
+            right: 0px; 
+            height: 1px;
+            overflow: hidden;
+            width: 78%;
+            background: #ffffff;
+            transform-origin: 100% 100%;
+            transform: rotate(29.5deg);
+        }
+
+        .sideC {
+            display: none;
+            position: absolute;
+            bottom: 0px;
+            left: 0px; 
+            height: 1px;
+            overflow: hidden;
+            width: 100%;
+            background: #ffffff;
+        }
+    }
+
+    .questionSign {
+        position: absolute;
+        color: #ffffff;
+        text-align: center;
+        width: 100%;
+        font-size: 90px;
+        bottom: 50%;
+    }
+
+    .question {
+        position: absolute;
+        color: #ffffff;
+        text-align: center;
+        width: 100%;
+        font-size: 16px;
+        bottom: 20%;
+    }
+
+    .label {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 20px;
+        font-size: 20px;
+    }
+
+    &.scalene {
+        .questionSign,
+        .question {
+            display: none;
+        }
+
+        .inner {
+            .sideA {
+                display: block;
+            }
+
+            .sideB {
+                display: block;
+            }
+
+            .sideC {
+                display: block;
+            }
+        }
+    }
+
+    &.equilateral {
+        .questionSign,
+        .question {
+            display: none;
+        }
+
+        .inner {
+            .sideA {
+                display: block;
+                left: 27.5%;
+                width: 45%;
+                transform: rotate(-60deg);
+            }
+
+            .sideB {
+                display: block;
+                right: 27.5%;
+                width: 45%;
+                transform: rotate(60deg);
+            }
+
+            .sideC {
+                display: block;
+                left: 27.5%;
+                width: 45%;
+            }
+        }
+    }
+
+    &.isosceles {
+        .questionSign,
+        .question {
+            display: none;
+        }
+
+        .inner {
+            .sideA {
+                display: block;
+                width: 61%;
+                transform: rotate(-35deg);
+            }
+
+            .sideB {
+                display: block;
+                width: 61%;
+                transform: rotate(35deg);
+            }
+
+            .sideC {
+                display: block;
+            }
+        }
+    }
+}

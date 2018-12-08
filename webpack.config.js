@@ -27,7 +27,7 @@ module.exports = {
     ],
     mode: process.env.WEBPACK_ENV,
     resolve: {
-        extensions: ['.webpack.js', '.web.js', '.js', '.json', '.js', '.jsx', '.png'],
+        extensions: ['.webpack.js', '.web.js', '.js', '.json', '.js', '.jsx'],
         alias: {
             assets: path.resolve(__dirname, 'assets'),
         },

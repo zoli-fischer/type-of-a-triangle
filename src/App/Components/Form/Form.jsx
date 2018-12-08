@@ -1,7 +1,8 @@
 import React from 'react';
 import FormField from '../FormField/FormField';
 import Triangle from '../../Classes/Triangle/Triangle';
-import Str from '../../Classes/String/String';
+// import Formatter from '../../Classes/Formatter/Formatter';
+import TriangleDrawing from '../TriangleDrawing/TriangleDrawing';
 
 export default class Header extends React.PureComponent {
     constructor(props) {
@@ -36,7 +37,7 @@ export default class Header extends React.PureComponent {
             type,
         });
         if (type && state.type !== type) {
-            window.ts.ui.Notification.success(Str.capitalizeFirst(type));
+            // window.ts.ui.Notification.success(Formatter.capitalizeFirst(type));
         }
     }
 
@@ -69,14 +70,8 @@ export default class Header extends React.PureComponent {
                             </div>
                         ) : null
                     }
-                    <p>{type}</p>
-                    <div className="triangle">
-                        <div className="inner">
-                            <div className="sideA" />
-                            <div className="sideB" />
-                            <div className="sideC" />
-                        </div>
-                    </div>
+                    <div className="divider" />
+                    <TriangleDrawing type={type || ''} />
                 </div>
             </form>
         );

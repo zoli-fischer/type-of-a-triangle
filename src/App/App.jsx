@@ -6,11 +6,16 @@ import './App.less';
 export default class App extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            index: '1234',
-        };
-        const { index } = this.state;
-        console.log(index);
+        this.refMoreInfo = React.createRef();
+        this.readMore = this.readMore.bind(this);
+    }
+
+    componentDidMount() {
+        this.refMoreInfo.current.setAttribute('data-ts.title', 'Links');
+    }
+
+    readMore() {
+        this.refMoreInfo.current.setAttribute('data-ts.open', true);
     }
 
     render() {
@@ -27,7 +32,10 @@ export default class App extends React.Component {
                                         <div className="row">
                                             <div className="col-12">
                                                 <h1>Find out whether a triangle is equilateral, isosceles or scalene</h1>
-                                                <p>Type in the lengths of a triangle&apos;s three sides</p>
+                                                <p>
+                                                    <span>Type in the lengths of a triangle&apos;s three sides. </span>
+                                                    <a href="javascript:{}" onClick={this.readMore}>Click here to read more.</a>
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -42,6 +50,14 @@ export default class App extends React.Component {
                         </div>
                     </div>
                 </main>
+                <aside data-ts="Aside" ref={this.refMoreInfo}>
+                    <div data-ts="Panel">
+                        <p><a href="http://www.cut-the-knot.org/triangle/Triangles.shtml" rel="noopener noreferrer" target="_blank">Triangle Classification</a></p>
+                        <p><a href="https://mathbitsnotebook.com/Geometry/SegmentsAnglesTriangles/SATTriangleTypes.html" rel="noopener noreferrer" target="_blank">Types of Triangles</a></p>
+                        <p><a href="https://www.dummies.com/education/math/geometry/identifying-scalene-isosceles-and-equilateral-triangles/" rel="noopener noreferrer" target="_blank">Identifying scalene, isosceles, and equilateral triangles</a></p>
+                        <p><a href="https://www.infoplease.com/science-health/numbers-and-formulas/triangles" rel="noopener noreferrer" target="_blank">Triangles</a></p>
+                    </div>
+                </aside>
             </React.Fragment>
         );
     }
