@@ -31,12 +31,25 @@ header .logo > img {
   display: block;
   padding-top: 46%;
 }
+@media (max-width: 599px) {
+  .triangle:before {
+    padding-top: 52%;
+  }
+}
 .triangle .inner {
   position: absolute;
   left: 50px;
   right: 50px;
   top: auto;
   bottom: 35px;
+}
+@media (max-width: 599px) {
+  .triangle .inner {
+    left: 30px;
+    right: 30px;
+    top: auto;
+    bottom: 15px;
+  }
 }
 .triangle .inner .sideA {
   display: none;
@@ -80,6 +93,12 @@ header .logo > img {
   font-size: 90px;
   bottom: 50%;
 }
+@media (max-width: 599px) {
+  .triangle .questionSign {
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+}
 .triangle .question {
   position: absolute;
   color: #ffffff;
@@ -94,6 +113,11 @@ header .logo > img {
   text-align: center;
   top: 20px;
   font-size: 20px;
+}
+@media (max-width: 599px) {
+  .triangle .label {
+    top: 15px;
+  }
 }
 .triangle.scalene .questionSign,
 .triangle.scalene .question {
@@ -153,13 +177,29 @@ main {
 .divider {
   height: 30px;
 }
+@media (max-width: 599px) {
+  .divider {
+    height: 15px;
+  }
+}
 .divider.double {
   height: 60px;
+}
+@media (max-width: 599px) {
+  .divider.double {
+    height: 30px;
+  }
 }
 .text-right {
   text-align: right;
 }
 .ts-main {
   overflow-y: auto;
+}
+@media (max-width: 599px) {
+  h1 {
+    font-size: 30px;
+    line-height: 36px;
+  }
 }
 
