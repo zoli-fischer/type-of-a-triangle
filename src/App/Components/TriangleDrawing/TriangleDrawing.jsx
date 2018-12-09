@@ -3,12 +3,8 @@ import PropTypes from 'prop-types';
 import './TriangleDrawing.less';
 import Formatter from '../../Classes/Formatter/Formatter';
 
+//  eslint-disable-next-line react/prefer-stateless-function
 export default class TriangleDrawing extends React.Component {
-    constructor(props) {
-        super(props);
-        console.log('1');
-    }
-
     render() {
         const { type } = this.props;
         return (

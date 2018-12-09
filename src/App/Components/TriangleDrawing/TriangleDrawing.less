@@ -7,6 +7,10 @@
         content: "";
         display: block;
         padding-top: 46%;
+
+        @media (max-width: 599px) {
+            padding-top: 52%;
+        }
     }
 
     .inner {
@@ -15,6 +19,13 @@
         right: 50px;
         top: auto;
         bottom: 35px;
+
+        @media (max-width: 599px) {
+            left: 30px;
+            right: 30px;
+            top: auto;
+            bottom: 15px;
+        }
 
         .sideA {
             display: none;
@@ -61,6 +72,11 @@
         width: 100%;
         font-size: 90px;
         bottom: 50%;
+
+        @media (max-width: 599px) {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
     }
 
     .question {
@@ -78,6 +94,10 @@
         text-align: center;
         top: 20px;
         font-size: 20px;
+
+        @media (max-width: 599px) {
+            top: 15px;    
+        }
     }
 
     &.scalene {

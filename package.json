@@ -7,7 +7,8 @@
   "scripts": {
     "test": "jest",
     "dev": "WEBPACK_ENV=development webpack-dev-server",
-    "build": "jest && WEBPACK_ENV=production ./node_modules/webpack/bin/webpack.js"
+    "build": "jest && WEBPACK_ENV=production ./node_modules/webpack/bin/webpack.js",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,7 @@
     "eslint-plugin-react": "^7.11.1",
     "expect": "^23.6.0",
     "file-loader": "^2.0.0",
+    "gh-pages": "^2.0.1",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^23.6.0",
     "less": "^3.9.0",

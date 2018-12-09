@@ -4,6 +4,6 @@ import TriangleDrawing from './TriangleDrawing';
 
 it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<TriangleDrawing />, div);
+    ReactDOM.render(<TriangleDrawing type="equilateral" />, div);
     ReactDOM.unmountComponentAtNode(div);
 });

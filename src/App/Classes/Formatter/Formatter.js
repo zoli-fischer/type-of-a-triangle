@@ -1,5 +1,5 @@
 export default class Formatter {
     static capitalizeFirst(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
+        return typeof string === 'string' ? (string.charAt(0).toUpperCase() + string.slice(1)) : '';
     }
 }

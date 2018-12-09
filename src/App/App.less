@@ -4,9 +4,16 @@ main {
 
 .divider {
     height: 30px;
+    @media (max-width: 599px) {
+        height: 15px;
+    }
 
     &.double {
         height: 60px;
+
+        @media (max-width: 599px) {
+            height: 30px;
+        }
     }
 }
 
@@ -16,4 +23,11 @@ main {
 
 .ts-main {
     overflow-y: auto;
+}
+
+h1 {
+    @media (max-width: 599px) {
+        font-size: 30px;
+        line-height: 36px;
+    }
 }
