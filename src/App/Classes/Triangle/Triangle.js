@@ -8,6 +8,13 @@ export default class Triangle {
     /** All sides are different */
     static get SCALENE() { return 'scalene'; }
 
+    /**
+     * Get the type a triangle from
+     * @param {integer} a Length of triangle side
+     * @param {integer} b Length of triangle side
+     * @param {integer} c Length of triangle side
+     * @returns If the given lengths are not correct for a triangle than false else Triangle.EQUILATERAL, Triangle.ISOSCELES or Triangle.SCALENE
+     */
     static getType(a, b, c) {
         if (Triangle.isValid(a, b, c)) {
             if (a === b && b === c) {
@@ -39,6 +46,13 @@ export default class Triangle {
         return (typeof nr === 'number' && nr > 0) || (typeof nr === 'string' && /^[0-9]+[.,]*[0-9]*$/.test(nr));
     }
 
+    /**
+     * Check if 3 lengts can build a triangle based on triangle inequality theorem
+     * @param {integer} a Length of triangle side
+     * @param {integer} b Length of triangle side
+     * @param {integer} c Length of triangle side
+     * @returns If the given lengths are not correct for a triangle false else true
+     */
     static isValid(a, b, c) {
         return Triangle.isValidPositiveNr(a)
             && Triangle.isValidPositiveNr(b)
