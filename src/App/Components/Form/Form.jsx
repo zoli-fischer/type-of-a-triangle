@@ -1,7 +1,6 @@
 import React from 'react';
 import FormField from '../FormField/FormField';
 import Triangle from '../../Classes/Triangle/Triangle';
-// import Formatter from '../../Classes/Formatter/Formatter';
 import TriangleDrawing from '../TriangleDrawing/TriangleDrawing';
 
 export default class Header extends React.PureComponent {
@@ -36,9 +35,6 @@ export default class Header extends React.PureComponent {
             inequality,
             type,
         });
-        if (type && state.type !== type) {
-            // window.ts.ui.Notification.success(Formatter.capitalizeFirst(type));
-        }
     }
 
     render() {

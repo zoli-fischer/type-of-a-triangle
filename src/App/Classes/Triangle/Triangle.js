@@ -28,6 +28,11 @@ export default class Triangle {
         return false;
     }
 
+    /**
+     * Converts a string  to number (base 10).
+     * @param {integer|string} nr
+     * @returns {integer|boolean} If the given parameter can't be validated for a positive number returns false. If the given parameter is a number returns it.
+     */
     static strToNr(nr) {
         if (Triangle.isValidPositiveNr(nr)) {
             switch (typeof nr) {
@@ -42,6 +47,11 @@ export default class Triangle {
         return false;
     }
 
+    /**
+     * Validates if string or number is a valid positive number format
+     * @param {integer|string} nr
+     * @returns {boolean}
+     */
     static isValidPositiveNr(nr) {
         return (typeof nr === 'number' && nr > 0) || (typeof nr === 'string' && /^[0-9]+[.,]*[0-9]*$/.test(nr));
     }
@@ -51,7 +61,7 @@ export default class Triangle {
      * @param {integer} a Length of triangle side
      * @param {integer} b Length of triangle side
      * @param {integer} c Length of triangle side
-     * @returns If the given lengths are not correct for a triangle false else true
+     * @returns {boolean}
      */
     static isValid(a, b, c) {
         return Triangle.isValidPositiveNr(a)

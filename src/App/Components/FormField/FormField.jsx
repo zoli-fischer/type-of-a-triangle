@@ -33,7 +33,7 @@ export default class FormField extends React.Component {
                         <span>Side </span>
                         <b>{side.toUpperCase()}</b>
                     </span>
-                    <input type="text" min="0" id={`side${side}`} value={value} onChange={this.handleChange} maxLength="8" />
+                    <input type="number" id={`side${side}`} value={value} onChange={this.handleChange} maxLength="8" />
                 </label>
                 {
                     !valid ? (
