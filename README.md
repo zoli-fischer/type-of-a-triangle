@@ -51,9 +51,9 @@ For the interface engine I used React, is the hotest tool for building user inte
 I wrote the code in ECMAScript 6 because that is the future of Javascript.
 To ensure code readabilty and syntax ingegrity I used ESLint for linting.
 I added Babel compiler so the ES6 is complied to ES5 for wider browser compatibility. For package management and building the project I used npm and webpack. For tesint I used jest 'zero-configuration' Javascript testing tool. I used Less instead of pure CSS, because Less > CSS.
-> I chose the above described setup for the project because I work with similar setup everty day and I think it makes easy and fast to build project and keeps the code future prof and easy to maintain
+> I chose the above described setup for the project because I work with similar setup everyday day and I think it makes easy and fast to build project and keeps the code future prof and easy to maintain
 
-# I diveded the structure of the app in 2:
+# I divided the structure of the app in 2:
 
 1. Components - UI - React components
 
